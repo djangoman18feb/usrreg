@@ -7,16 +7,13 @@
         <div class="col-md-8">
             <div class="quote" itemscope itemtype="#">
                 <h4>{{ quote.artist }}</h4>
-{% for art_his in quote.about_art_set.all %}
-
+        {% for art_his in quote.about_art_set.all %}
                 <h4>{{ art_his.artist_his }}</h4>
                 <span class="text" itemprop="text">{{ quote.text }}</span>
             </div>
         </div>
     </div>
-
 {% endfor %}
-
 {% endblock %}
 
 

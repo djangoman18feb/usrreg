@@ -10,15 +10,10 @@ from django.shortcuts import get_object_or_404
 
 def index(request):
     all_quotes = Quote.objects.all()
-    context = {
-        'all_quotes': all_quotes,
-    }
-    return render(request,'apage/index.html', context)
+    return render(request,'apage/index.html', {'all_quotes': all_quotes})
 
 def detail(request, quote_id):
-    try:
-        aritst_history = Quote.objects.get(pk=quote_id)
-    except(Http404):
-        return HttpResponse("Page Doesn't exist")
-    else:
-        return HttpResponse('<h4>history of Artist of quote id' + str(quote_id) +'</h4>')
+    quote = get_object_or_404(Quote, pk=quote_id)
+    return render(request, 'apage/detail.html', {'quote': quote})
+
+

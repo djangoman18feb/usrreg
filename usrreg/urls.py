@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^apage/', include('apage.urls'))
+    url(r'^apage/', include('apage.urls')),
+
 ]

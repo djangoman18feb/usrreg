@@ -1,10 +1,14 @@
 from django.db import models
+from django.core.urlresolvers import reverse   #to divert them to any page(detail page)after they submit the model form
 
 # Create your models here.
 class Quote(models.Model):
-    text = models.CharField(max_length=3000)
+    text = models.CharField(max_length=100)
     tag = models.CharField(max_length=100, default="Unknown")
     artist = models.CharField(max_length=100, default="Anonumous")
+
+    def get_absolute_url(self):
+        return reverse('apage:detail', kwargs={'pk':self.pk})
 
 
     def __str__(self):

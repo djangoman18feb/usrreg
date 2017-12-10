@@ -1,20 +1,7 @@
 
 {% extends 'apage/base.html' %}
 {% block content %}
-    <div class="container">
-        <div class="row header-box">
-            <div class="col-md-8">
-                <h1>
-                    <a href="{% url 'apage:index' %}" style="text-decoration: none">Quotes</a>
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <p>
-                    <a href="#">Login</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    <h3>Welcome to WOT </h3>
 
     {% for quote in all_quotes %}
     <div class="row">
@@ -25,6 +12,7 @@
                 <span>by <small class="author" itemprop="author">{{ quote.artist }}</small>
                 <a href="{% url 'apage:detail' quote.id %}">(about)</a>
                 </span>
+                {% include 'apage/form-delete.html' %}
             </div>
         </div>
     </div>

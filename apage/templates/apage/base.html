@@ -14,6 +14,23 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'apage/style.css' %}"/>
 
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="{% url 'apage:index' %}" style="text-decoration: none">Quotes</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <a href="{% url 'apage:register' %}">Sign UP</a>
+                    <a href="#">Login</a>
+                    <a href="{% url 'apage:add_quote' %}">Add Quote</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
 {% block content %}
 {% endblock %}
 </body>

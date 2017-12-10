@@ -48,49 +48,10 @@ class QuoteDelete(DeleteView):
     model = Quote
     success_url = reverse_lazy('apage:index')
 
+#this one didnt work so far as below
 # def logout_view(request):
 #     logout(request)
 #     success_url = reverse_lazy('apage:index')
 #     return redirect(success_url)
 #
-
-
-class UserFormView(View):
-    form_class = User_Form
-    template_name = 'apage/registration_form.html'
-
-    #display blank form
-    def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
-
-    #now user has all the info filled in and submitting it
-    #so now process data
-
-    def post(self, request):
-        form = self.form_class(request.POST)
-
-        if form.is_valid():
-            user = form.save(commit=False)
-
-            #cleaned (normalized data)
-
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            user.set_password(password)
-            user.save()
-
-            #returns user objects after authentication if credentials are correct
-            user = authenticate(request, username=username, password=password)
-
-            if user is not None:
-
-                if user.is_active:
-                    login(request, user)
-                    return redirect('apage:index')
-        return render(request, self.template_name, {'form': form})
-
-
 

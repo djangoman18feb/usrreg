@@ -17,6 +17,11 @@ from django.contrib.auth import logout
 from django.contrib.auth.models import User
 
 
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+
+
 def index(request):
     all_quotes = Quote.objects.all()
     return render(request,'apage/index.html', {'all_quotes': all_quotes})
@@ -48,18 +53,19 @@ class QuoteDelete(DeleteView):
     model = Quote
     success_url = reverse_lazy('apage:index')
 
-
-
-
-
-
-
-
-
-
-
-
-
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('/apage/quote/add/')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
 #this one didnt work so far as below
 # def logout_view(request):

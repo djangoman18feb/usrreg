@@ -48,6 +48,19 @@ class QuoteDelete(DeleteView):
     model = Quote
     success_url = reverse_lazy('apage:index')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 #this one didnt work so far as below
 # def logout_view(request):
 #     logout(request)

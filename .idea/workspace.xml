@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89242a7-2d87-4dfe-92a0-e809e319553c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_complete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_confirm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_done.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_email.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/password_reset_subject" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apage/templates/registration/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apage/templates/apage/base.html" afterPath="$PROJECT_DIR$/apage/templates/apage/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apage/views.py" afterPath="$PROJECT_DIR$/apage/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usrreg/settings.py" afterPath="$PROJECT_DIR$/usrreg/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usrreg/urls.py" afterPath="$PROJECT_DIR$/usrreg/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -358,16 +346,22 @@
       <option name="project" value="LOCAL" />
       <updated>1512930275363</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="all user_registration/login/authentication/password reset an all is done but as we really need to customise bit more for registration part so that we can have some desired data we will build it again seprately in next step.">
+      <created>1512941169381</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1512941169381</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34154353" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23316912" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -397,7 +391,8 @@
     <MESSAGE value="Completed Index, Detail, Base and Functions for the these webpages" />
     <MESSAGE value="experimenting by removing the user sign up system to develop one more advance and better." />
     <MESSAGE value="login and logout built up" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and logout built up" />
+    <MESSAGE value="all user_registration/login/authentication/password reset an all is done but as we really need to customise bit more for registration part so that we can have some desired data we will build it again seprately in next step." />
+    <option name="LAST_COMMIT_MESSAGE" value="all user_registration/login/authentication/password reset an all is done but as we really need to customise bit more for registration part so that we can have some desired data we will build it again seprately in next step." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

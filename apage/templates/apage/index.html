@@ -6,13 +6,12 @@
     {% for quote in all_quotes %}
     <div class="row">
         <div class="col-md-8">
-
             <div class="quote" itemscope itemtype="#">
                 <span class="text" itemprop="text">{{ quote.text }}</span>
                 <span>by <small class="author" itemprop="author">{{ quote.artist }}</small>
                 <a href="{% url 'apage:detail' quote.id %}">(about)</a>
                 </span>
-                {% include 'apage/form-delete.html' %}
+                <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a>
             </div>
         </div>
     </div>

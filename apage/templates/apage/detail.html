@@ -6,14 +6,16 @@
 <div class="row">
         <div class="col-md-8">
             <div class="quote" itemscope itemtype="#">
-                <h4>{{ quote.artist }}</h4>
-        {% for art_his in quote.about_art_set.all %}
-                <h4>{{ art_his.artist_his }}</h4>
+        {% for art_profile in quote.about_art_set.all %}
+                <img src="https://www.biography.com/.image/c_fit%2Ccs_srgb%2Ch_406%2Cq_50%2Cw_620/MTIwNjA4NjMzODAzNDc0NDQ0/einstein-albert-head-raw.jpg" alt="Artist Image" height="200" width="200"/>
+                <h4>{{ art_profile.artist_name }}</h4>
+                <h3>{{ art_profile.artist_title }}</h3>
+                <p><em>{{ art_profile.artist_des }}</em></p>
+                <p>{{ art_profile.artist_story }}</p>
                 <span class="text" itemprop="text">{{ quote.text }}</span>
             </div>
         </div>
     </div>
 {% endfor %}
 {% endblock %}
-
 

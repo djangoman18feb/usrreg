@@ -1,0 +1,20 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+    <div class="container">
+        <h3>Profile Info</h3>
+        <img src="{{ user.userprofile.image.url }}" alt="No Profile Photo" width="200" height="200"/>
+        <p>Username: {{ user.username }}</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+        <p>Title: {{ user.userprofile.title }}</p>
+        <p>Age: {{ user.userprofile.age }}</p>
+        <p>Contact No: {{ user.userprofile.phone }}</p>
+        <p>Reg Email: {{ user.email }}</p>
+        <p>Location: {{ user.userprofile.address }}</p>
+        <p>Description: {{ user.userprofile.description }}</p>
+        <p>Story: {{ user.userprofile.Story }}</p>
+        <p>Gender: {{ user.userprofile.gender }}</p>
+
+    </div>
+{% endblock %}
+    usrreg/media/profile_image/image1.jpg

@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Logged Out</title>
-</head>
-<body>
-{% block title %}LoggedOut{% endblock %}
-<h4>You are logged out</h4>
-<a href="../../../apage/templates/apage">click here to get redirected to Home page</a>
-</body>
-</html>
+{% extends 'accounts/base.html'%}
+{% block content %}
+<h1>Logged Out</h1>
+<h4>You have successfully logged out!</h4>
+<a href="#">click here to get redirected to Home page</a>
+{% endblock %}

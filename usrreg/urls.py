@@ -18,13 +18,23 @@ from django.contrib import admin
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from apage import views
-
-
-
+from accounts import views
+from django.shortcuts import redirect
 from django.contrib.auth.views import logout
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
+    url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
     url(r'^apage/', include('apage.urls')),
     url(r'^account/', include('accounts.urls')),
-]
+    url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', auth_views.password_reset_confirm,{'post_reset_redirect': 'password_reset_complete', 'template_name': 'accounts/reset_password_confirm.html'}, name='password_reset_confirm'),
+    url(r'^reset-password/complete/$', auth_views.password_reset_complete, {'template_name': 'accounts/reset_password_complete.html'}, name='password_reset_complete'),
+    ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

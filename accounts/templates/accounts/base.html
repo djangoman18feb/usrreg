@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} <title>Accounts</title> {% endblock %}
+
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--loading css file-->
+        {% load static %}
+        <link type="text/css" rel="stylesheet" href={% static 'accounts/style.css' %}/>
+        <title>Base</title>
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Wall Of Thoughts!</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                {% if user.is_authenticated %}
+                <ul class="nav navbar-nav">
+                  <li><a href="/account">Home</a></li>
+                  <li><a href="{% url 'accounts:profile' %}">Profile</a></li>
+                  <li><a href="{% url 'accounts:edit_profile' %}">Edit Profile</a></li>
+                  <li><a href="{% url 'accounts:change_password' %}">Change Password</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+                </ul>
+                {% else %}
+                <ul class="nav navbar-nav">
+                  <li><a href="/account">Home</a></li>
+                  <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                  <li><a href="{% url 'accounts:reset_password' %}">Reset Password</a></li>
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'accounts:register' %}">Register</a></li>
+                    </ul>
+                {% endif%}
+                  </div>
+          </div>
+      </nav>
+    </div> <!-- /container -->
+{% block content %}
+    <h1>Base</h1>
+{% endblock %}
+</body>
+</html>

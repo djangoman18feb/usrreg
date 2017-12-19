@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'usrreg.middleware.LoginRequiredMiddleware',
+
 ]
 
 ROOT_URLCONF = 'usrreg.urls'
@@ -71,7 +71,10 @@ TEMPLATES = [
     },
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 WSGI_APPLICATION = 'usrreg.wsgi.application'
+
 
 
 # Database
@@ -121,6 +124,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/apage/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = '/account/'
+
+LOGIN_URL = '/account/login/'
+LOGIN_EXEMPT_URLS = (
+    r'^account/logout/$',
+    r'^account/register/$',
+    r'^account/reset-password/$',
+    r'^account/reset-password/done/$',
+    r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+    r'^reset-password/complete/$',)
+#
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025

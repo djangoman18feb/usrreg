@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts.apps.AccountsConfig',
+    'home',
+    'accounts',
     'apage.apps.ApageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -137,8 +138,8 @@ LOGIN_EXEMPT_URLS = (
     r'^account/register/$',
     r'^account/reset-password/$',
     r'^account/reset-password/done/$',
-    r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
-    r'^reset-password/complete/$',)
+    r'^account/reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+    r'^account/reset-password/complete/$',)
 #
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025

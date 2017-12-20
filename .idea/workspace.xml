@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89242a7-2d87-4dfe-92a0-e809e319553c" name="Default" comment="Adding A home Page to work along our matured login system.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/templates/admin/base_site.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/templates/home/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/urls.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/templates/accounts/home.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/templates/accounts/testadding_profile.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    <list default="true" id="b89242a7-2d87-4dfe-92a0-e809e319553c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/base.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/reset_password_email.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/reset_password_email.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/urls.py" afterPath="$PROJECT_DIR$/accounts/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usrreg/settings.py" afterPath="$PROJECT_DIR$/usrreg/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usrreg/urls.py" afterPath="$PROJECT_DIR$/usrreg/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -431,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513713261767</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding A home Page to work along our matured login system.">
+      <created>1513806934539</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1513806934542</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
